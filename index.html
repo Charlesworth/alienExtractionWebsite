@@ -10,37 +10,60 @@
   <title>Alien Extraction</title>
 
   <style>
+    html, body {
+      height: 100%;
+    }
     body {
       font-family: monospace;
       background-image: url('background/background.png');
+      display: flex;
+      flex-direction: column;
+    }
+    a {
+      color: white;
+    }
+    h2 {
+      text-align: center;
     }
 
-    .top {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
+    #title {
+      width: 800px;
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+    #lenny {
+      width: 600px;
+      max-width: 60%;
+    }
+    #steam {
+      height: 190px;
       width: 800px;
       max-width: 100%;
     }
 
-    .bottom {
+    .center {
       display: block;
       margin-left: auto;
       margin-right: auto;
-      height: 50%;
-      width: 600px;
-      max-width: 60%;
+    }
+    .content {
+      flex: 1 0 auto;
+    }
+    .footer {
+      flex-shrink: 0;
     }
   </style>
 </head>
 
 <body>
-  <img src="logos/logo_small.png" alt="Alien Extraction" class="top">
-  </br>
-  </br>
-  <iframe src="https://store.steampowered.com/widget/1768730/" frameborder="0" class="top" height="190"></iframe>
-  <h2 style="text-align: center;"><a href="presskit.html" style="color: white;">Press Kit</a></h2>
-  <img src="logos/lenny_small.png" alt="Lenny the janitor" class="bottom">
+  <div class="content">
+    <img id="title" class="center" src="logos/logo_small.png" alt="Alien Extraction">
+    <iframe id="steam" class="center" src="https://store.steampowered.com/widget/1768730/" frameborder="0"></iframe>
+    <h2><a href="presskit.html">Press Kit</a></h2>
+  </div>
+  <div class="footer">
+    <img src="logos/lenny_small.png" alt="Lenny the janitor" id="lenny" class="center">
+  </div>
 </body>
 
 </html>
